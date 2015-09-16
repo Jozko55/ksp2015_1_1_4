@@ -1,14 +1,14 @@
 import java.util.Arrays;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 class Riesenie {
-  public static void main(String[] args) throws FileNotFoundException {
-    File subor = new File(args[0]);
+  public static void main(String[] args) {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     Scanner scanner = null;
     try {
-      scanner = new Scanner(subor);
+      scanner = new Scanner(br);
       int pocet_samponov = Integer.parseInt(scanner.nextLine());
       String[]rano = scanner.nextLine().split(" ", -1);
       String[]vecer = scanner.nextLine().split(" ", -1);
